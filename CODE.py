@@ -19,9 +19,9 @@ input_shape = (rows,cols,1)
 train = ImageDataGenerator(rescale= 1/255)
 validation = ImageDataGenerator(rescale= 1/255)
 test = ImageDataGenerator(rescale= 1/255)
-train_dataset = train.flow_from_directory(r"C:\Users\retr0\Desktop\CCR\.slugignore\new_dat\Train",target_size=(50,50), batch_size=30, class_mode = 'categorical', color_mode = 'grayscale')
-validation_dataset = validation.flow_from_directory(r"C:\Users\retr0\Desktop\CCR\.slugignore\new_dat\Validation",target_size=(50,50), batch_size=30, class_mode = 'categorical', color_mode = 'grayscale')
-test_dataset = test.flow_from_directory(r"C:\Users\retr0\Desktop\CCR\.slugignore\new_dat\Test",target_size=(50,50), batch_size=30, class_mode = 'categorical', color_mode = 'grayscale')
+train_dataset = train.flow_from_directory(r"/new_dat/Train",target_size=(50,50), batch_size=30, class_mode = 'categorical', color_mode = 'grayscale')
+validation_dataset = validation.flow_from_directory(r"/new_dat/Validation",target_size=(50,50), batch_size=30, class_mode = 'categorical', color_mode = 'grayscale')
+test_dataset = test.flow_from_directory(r"/new_dat/Test",target_size=(50,50), batch_size=30, class_mode = 'categorical', color_mode = 'grayscale')
 
 model2 = tf.keras.models.Sequential([
     tf.keras.layers.Conv2D(6,(3,3),activation='relu', input_shape=input_shape),
