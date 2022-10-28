@@ -19,9 +19,9 @@ input_shape = (rows,cols,1)
 train = ImageDataGenerator(rescale= 1/255)
 validation = ImageDataGenerator(rescale= 1/255)
 test = ImageDataGenerator(rescale= 1/255)
-train_dataset = train.flow_from_directory(r"C:\Users\retr0\Desktop\CCR\new_dat\Train",target_size=(360,360), batch_size=30, class_mode = 'categorical', color_mode = 'grayscale')
-validation_dataset = validation.flow_from_directory(r"C:\Users\retr0\Desktop\CCR\new_dat\Validation",target_size=(360,360), batch_size=30, class_mode = 'categorical', color_mode = 'grayscale')
-test_dataset = test.flow_from_directory(r"C:\Users\retr0\Desktop\CCR\new_dat\Test",target_size=(360,360), batch_size=30, class_mode = 'categorical', color_mode = 'grayscale')
+train_dataset = train.flow_from_directory(r"C:\Users\retr0\Desktop\CCR\.slugignore\new_dat\Train",target_size=(360,360), batch_size=30, class_mode = 'categorical', color_mode = 'grayscale')
+validation_dataset = validation.flow_from_directory(r"C:\Users\retr0\Desktop\CCR\.slugignore\new_dat\Validation",target_size=(360,360), batch_size=30, class_mode = 'categorical', color_mode = 'grayscale')
+test_dataset = test.flow_from_directory(r"C:\Users\retr0\Desktop\CCR\.slugignore\new_dat\Test",target_size=(360,360), batch_size=30, class_mode = 'categorical', color_mode = 'grayscale')
 
 model = tf.keras.models.Sequential([
     tf.keras.layers.Conv2D(filters=96,input_shape=input_shape, kernel_size=(11,11), strides=(4,4),padding='valid', activation='relu'),
@@ -63,6 +63,4 @@ validation_dataset.reset()
 
 model.evaluate(validation_dataset)
 
-print("")
-print("Total GPUs available: ", len(tf.config.list_physical_devices('GPU')))
-print("GPU used is Nvidia GTX 1650")
+
