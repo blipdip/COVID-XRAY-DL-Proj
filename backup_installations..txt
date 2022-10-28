@@ -16,3 +16,26 @@ toolz @ file:///home/conda/feedstock_root/build_artifacts/toolz_1657485559105/wo
 tqdm @ file:///opt/conda/conda-bld/tqdm_1647339053476/work
 urllib3 @ file:///opt/conda/conda-bld/urllib3_1643638302206/work
 win-inet-pton @ file:///C:/ci/win_inet_pton_1605306162074/work
+
+
+astunparse==1.6.3
+brotlipy==0.7.0
+
+contourpy==1.0.5 (after click
+
+flatbuffers==22.10.26
+fonttools==4.38.0 (after flask
+
+gunicorn==20.1.0 (last g
+
+itsdangerous==2.1.2 (last i
+
+libclang==14.0.6 (only l
+
+packaging==21.3 (pillow ke upar
+
+pycosat==0.6.3 (after pysn-mod
+
+
+threadpoolctl==3.1.0
+typing_extensions==4.4.0 (last t
